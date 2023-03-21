@@ -1,21 +1,22 @@
-# ile=0
-# for i in range(1,11):
-#     if i%2 == 0:
-#         ile +=1
-#         print (i)
-# print(f"ile liczb parzystych {ile}")
+numbers = [3, 7, 9, 12]
+first, second, third, four = numbers
+sum = first + second + third + four
+print(sum)
 
+def najmniejsza(list):
+    min = list[0 ]
+    for i in numbers:
+        if i < min:
+            i = min
+    return min
 
-def fizz():
-    k=""
-    for i in range(1,101):
-        if i%3 == 0 and i%5 == 0:
-            k+="fizzbuzz \n"
-        elif i%3 == 0:
-            k+="fizz \n"
-        elif i%5 == 0:
-            k+="buzz \n"
-        else:
-            k+=str(i)+"\n"
-    return k
-print(fizz()) 
+print(najmniejsza(numbers))
+
+students = [
+    {"imie": "Jan", "wiek": 20},
+    {"imie": "Karolina", "wiek": 15},
+    {"imie": "Brunhilda", "wiek": 185}
+]
+
+students.sort(key = lambda student:student["wiek"])
+print(students[0])
